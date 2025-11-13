@@ -2,12 +2,12 @@
 
 Proyecto de portafolio personal usando **Web Components** puros en Vanilla JavaScript.
 
-## ✅ Especificaciones Implementadas
+## Especificaciones Implementadas
 
-- ✅ **Custom Elements** - Componentes personalizados HTML
-- ✅ **Shadow DOM** - Encapsulamiento de estilos y estructura
-- ✅ **ES Modules** - Sistema de módulos nativo (import/export)
-- ✅ **HTML Templates** - Template literals en el constructor
+- **Custom Elements** - Componentes personalizados HTML
+- **Shadow DOM** - Encapsulamiento de estilos y estructura
+- **ES Modules** - Sistema de módulos nativo (import/export)
+- **HTML Templates** - Template literals en el constructor
 
 ---
 
