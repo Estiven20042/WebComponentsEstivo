@@ -1,290 +1,155 @@
-# 🎨 Portafolio de Artista con Web Components
+# 🎨 Mi Portafolio Artístico - PROYECTO P1 - Estiven Oña
 
-Proyecto de portafolio personal usando **Web Components** puros en Vanilla JavaScript.
+Este es un sitio web donde muestro lo que he hecho como artista:, personajes y proyectos artísticos (valga la redundancia)
 
-## Especificaciones Implementadas
+## ✨ ¿Qué hace este proyecto?
 
-- **Custom Elements** - Componentes personalizados HTML
-- **Shadow DOM** - Encapsulamiento de estilos y estructura
-- **ES Modules** - Sistema de módulos nativo (import/export)
-- **HTML Templates** - Template literals en el constructor
+Este sitio web es como una portafolio virtual, dónde:
+- Un componente de perfil muestra mi foto, nombre, alias, edad y una bio, además de cualidades que siento son clave.
+- Se dan a conocer a los personajes principales de mi manga.
+- Se Explora mi galería de ilustraciones terminadas.
+- Se ven mis bocetos y trabajos en progreso.
+- Promociono mis redes sociales
+- Hay un pequeño card/sección de publicidad
 
----
+Todo está construido con **Web Components**, para modularidad y mantenimiento ágil en caso de,
 
-## 📁 Estructura del Proyecto
+## 🚀 ¿Cómo ejecutar el proyecto?
+
+### Opción 1: Live Server (Recomendado)
+1. Abre el proyecto en Visual Studio Code
+2. Instala la extensión "Live Server" si no la tienes
+3. Haz clic derecho en `index.html`
+4. Seleccionar "Open with Live Server"
+5. ¡Listo! El sitio se abrirá en tu navegador
+- Tip: Después de instalar, abrir el index.html en el IDE y en la esquina derecha abajo aparecerá el botón live server.
+
+### Opción 2: Abrir directamente (no recomendado)
+1. Navega a la carpeta `public`
+2. Haz doble clic en `index.html`
+3. Se abrirá en el navegador por defecto, sin embargo por el API localstorage podría no cargar los datos y por tanto no mostrar información alguna.
+
+**Nota:** Algunos navegadores pueden tener problemas con módulos de JavaScript al abrir directamente. Si hay errores, es mejor instalar y usar Live Server
+
+## 🧩 Componentes del Proyecto
+
+Cada módulo tiene su chamba, en este caso, los describo brevemente a continuación:
+
+### 📦 Componentes Principales
+
+#### `perfil-artista`
+Muestra mi información personal: nombre, foto, edad, biografía y mis habilidades como artista. Es como mi tarjeta de presentación.
+
+#### `etiqueta-elemento` ⭐
+**¡El componente más reutilizable!** Es como una chapa o etiqueta bonita con colores y iconos. Se usa dentro de otros componentes:
+- En `perfil-artista`: muestra habilidades (Ilustración, Manga, etc.)
+- En `tarjeta-obra`: muestra las categorías de cada obra
+- En `promo-card`: destaca características especiales
+
+**Ejemplo de anidación (3 niveles):**
+```
+galeria-obras
+  └── tarjeta-obra
+       └── etiqueta-elemento
+```
+
+#### `galeria-obras`
+Muestra todas mis ilustraciones en un bonito collage. Cada obra se muestra usando `tarjeta-obra`.
+
+#### `tarjeta-obra`
+Es la tarjeta individual de cada ilustración. Muestra la imagen, título y etiquetas de categoría. Usa `etiqueta-elemento` para mostrar los tags.
+
+#### `cinta-personajes`
+Un carrusel interactivo que muestra mis personajes originales. Al hacer clic en cada uno, ¡se reproduce su tema musical!
+
+#### `promo-card`
+Una tarjeta promocional grande que destaca mi proyecto principal (mi manga web). Usa `etiqueta-elemento` para mostrar características.
+
+#### `galeria-sketches`
+Similar a `galeria-obras` pero muestra bocetos y trabajos en proceso.
+
+#### `proximos-proyectos`
+Lista de proyectos futuros en los que estoy trabajando. 
+
+#### `redes-sociales`
+Enlaces a todas mis redes sociales con iconos de Bootstrap
+
+### 🔧 Módulos de Soporte
+
+#### `data-loader.js`
+Es el localstorage, tiene la función de una base de datos CS (Client Side) para persistencia de datos, se puede escalar obviamente usando una DB como POSTGRES, MYSQL, etc... para poder trabajar con JSONs.
+
+#### `main.js`
+Aquí solo se mandan a llamar los componentes, sigue este proceso:
+1. Cargar los datos iniciales (Data-loader)
+2. Registrar todos los Web Components (ES Modules)
+3. Hacer que todo funcione junto (Define los componentes y funcionan al importarse como módulo en el index.)
+
+### 🎨 Archivos de Estilo
+
+Cada componente tiene su propio archivo CSS:
+- `perfil-artista.css` - Estilos del perfil
+- `etiqueta-elemento.css` - Estilos de las etiquetas (con gradientes bonitos)
+- `galeria-obras.css` - Estilos del collage de obras
+- `tarjeta-obra.css` - Estilos de las tarjetas individuales
+- Y más...
+
+## 📂 Estructura de Carpetas
 
 ```
 public/
-├── index.html
-├── css/
-│   ├── perfil-artista.css
-│   ├── cinta-personajes.css
-│   ├── tarjeta-obra.css
-│   ├── galeria-obras.css
-│   └── visor-imagen.css
-├── js/
-│   ├── main.js (importa y define componentes)
-│   ├── perfil-artista.js
-│   ├── cinta-personajes.js
-│   ├── tarjeta-obra.js
-│   ├── galeria-obras.js
-│   └── visor-imagen.js
+├── index.html              (Página principal)
 ├── assets/
-│   ├── img/
-│   │   ├── perfil.jpg
-│   │   ├── personaje-1.jpg, personaje-2.jpg, etc.
-│   │   ├── manga-1.jpg, manga-2.jpg
-│   │   ├── ilustracion-1.jpg, ilustracion-2.jpg
-│   │   └── sketch-1.jpg, sketch-2.jpg
-│   └── audio/
-│       ├── tema-kaito.mp3
-│       ├── tema-sakura.mp3
-│       └── tema-ryuu.mp3
-└── vendor/bootstrap/
+│   ├── img/               (Imágenes)
+│   └── audio/             (Archivos de audio)
+├── css/                   (Estilos de cada componente)
+├── js/                    (Módulos JS)
+│   ├── main.js           (Importa todo y define)
+│   ├── data-loader.js    (LocalStorage)
+│   ├── etiqueta-elemento.js 
+│   ├── perfil-artista.js
+│   ├── galeria-obras.js
+│   ├── tarjeta-obra.js
+│   └── ...
+└── vendor/
+    └── bootstrap/         (Framework de estilos e iconos)
 ```
 
+## 🎯 Características Requeridas
+
+### Componentes Anidados
+El proyecto demuestra cómo un componente puede usar otros componentes dentro de él:
+- `galeria-obras` usa múltiples `tarjeta-obra`
+- `tarjeta-obra` usa múltiples `etiqueta-elemento`
+- `perfil-artista` usa múltiples `etiqueta-elemento`
+
+### Temas Musicales
+Cada personaje tiene su propio tema musical. Con un hover se pueden escuchar los temas
+
+### Diseño Responsive
+El sitio se adapta a diferentes tamaños de pantalla (celular, tablet, computadora) gracias a Bootstrap.
+
+## 🛠️ Tecnologías Usadas
+
+- **HTML5** - Estructura
+- **CSS3** - Estilos y animaciones
+- **JavaScript (ES6 Modules)** - Lógica e interactividad, Además ES6 usando funciones flecha, const y let para variables.
+- **Web Components** - Componentes reutilizables
+- **Bootstrap 5** - Framework de diseño
+- **Bootstrap Icons** - Iconos bonitos
+- **LocalStorage** - Almacenamiento en el navegador
+
+## 📝 Notas para Developers
+
+En caso de querer hacer modificaciones:
+
+1. **Cambiar o agregar datos:** Editar o Crear Bloques en formato JSON `js/data-loader.js`
+2. **Agregar o modificar estilos:** Editar/Crear los archivos CSS correspondientes
+3. **Crear nuevo componente:** 
+   - Crear `js/mi-componente.js`
+   - Crear `css/mi-componente.css`
+   - Impórtarlo y regístrarlo en `main.js`
 ---
 
-## 🧩 Componentes
-
-### 1. `<perfil-artista>`
-Muestra el perfil del artista con foto, nombre, bio y estadísticas.
-
-**Atributos observados:**
-- `nombre` - Nombre del artista
-- `alias` - Usuario (@Estivo)
-- `edad` - Edad
-- `bio` - Biografía corta
-- `avatar` - Ruta de la imagen
-
-**Uso:**
-```html
-<perfil-artista 
-  nombre="Estiven Oña"
-  alias="@Estivo"
-  edad="21"
-  bio="Artista de manga"
-  avatar="./assets/img/perfil.jpg">
-</perfil-artista>
-```
-
----
-
-### 2. `<cinta-personajes>` 🎵
-Cinta horizontal con personajes del manga. **Al pasar el mouse reproduce música**.
-
-**Características:**
-- Reproduce audio al hacer hover
-- Pausa el audio anterior automáticamente
-- Scroll horizontal con personajes
-- Efecto visual cuando está activo
-- Lee personajes desde elementos `<personaje-item>` con atributos
-
-**Uso:**
-```html
-<cinta-personajes>
-  <personaje-item 
-    nombre="Kaito" 
-    imagen="./assets/img/personaje-1.jpg"
-    audio="./assets/audio/tema-kaito.mp3">
-  </personaje-item>
-  
-  <personaje-item 
-    nombre="Sakura" 
-    imagen="./assets/img/personaje-2.jpg"
-    audio="./assets/audio/tema-sakura.mp3">
-  </personaje-item>
-</cinta-personajes>
-```
-
----
-
-### 3. `<tarjeta-obra>`
-Tarjeta individual de una ilustración.
-
-**Atributos observados:**
-- `obra-id` - ID de la obra
-- `titulo` - Título
-- `imagen` - Ruta de la imagen
-- `categoria` - manga | ilustracion | sketch
-
-**Eventos emitidos:**
-- `obraSeleccionada` - Al hacer click
-
-**Uso:**
-```html
-<tarjeta-obra
-  obra-id="1"
-  titulo="Protagonista"
-  imagen="./assets/img/manga-1.jpg"
-  categoria="manga">
-</tarjeta-obra>
-```
-
----
-
-### 4. `<galeria-obras>` ⭐
-Contenedor que **genera `<tarjeta-obra>` dinámicamente** en formato **collage** (tipo Pinterest/Masonry).
-
-**Características:**
-- Layout de columnas que se adapta al tamaño de cada imagen
-- Sin filtros, muestra todas las obras
-- Diseño asimétrico y dinámico
-
-
-**Características:**
-- Crea componentes `<tarjeta-obra>` con `document.createElement()`
-- Filtra por categoría
-- Grid responsive
-
-**Datos internos:**
-```javascript
-this.obras = [
-  {
-    id: 1,
-    titulo: "Protagonista del Manga",
-    imagen: "./assets/img/manga-1.jpg",
-    categoria: "manga"
-  },
-  // más obras...
-**Uso:**
-```html
-<galeria-obras></galeria-obras>
-```
-
----
-
-### 5. `<visor-imagen>`
-Modal para ver imágenes ampliadas.
-
-**Eventos escuchados:**
-- `abrirVisor` - Abre el modal con la imagen
-
-**Uso:**
-```html
-<visor-imagen></visor-imagen>
-```
-
----
-
-## 🔄 Flujo de Comunicación
-
-```
-<perfil-artista>              (Estático con atributos)
-
-<cinta-personajes>            (Reproduce audio al hover)
-      ├─ <personaje-item>     (Atributos: nombre, imagen, audio)
-      ├─ <personaje-item>
-      └─ <personaje-item>
-
-<galeria-obras>               (Muestra todas las obras en collage)
-      ├─ <tarjeta-obra>       (Generada dinámicamente)
-      ├─ <tarjeta-obra>
-      └─ <tarjeta-obra>
-            └─ Emite: "obraSeleccionada"
-                          ↓
-<visor-imagen>                (Abre modal)
-```
-
----
-
-## 📝 Funciones JavaScript Explicadas
-
-### `forEach()`
-Recorre cada elemento de un array:
-```javascript
-array.forEach(elemento => {
-  // hacer algo con cada elemento
-});
-```
-
-### `querySelectorAll()`
-Busca todos los elementos que coincidan con un selector:
-```javascript
-const elementos = this.querySelectorAll('personaje-item');
-// Devuelve un NodeList con todos los <personaje-item>
-```
-
-### `getAttribute()`
-Obtiene el valor de un atributo HTML:
-```javascript
-const nombre = elemento.getAttribute('nombre');
-```
-
-### `addEventListener()`
-Escucha eventos en un elemento:
-```javascript
-elemento.addEventListener('click', () => {
-  // código al hacer click
-});
-```
-
-### `dispatchEvent()` y `CustomEvent()`
-Emite eventos personalizados:
-```javascript
-this.dispatchEvent(new CustomEvent('miEvento', {
-  detail: { datos: 'valor' },
-  bubbles: true,
-  composed: true
-}));
-```
-
-### `classList.add()` / `classList.remove()`
-Agrega o quita clases CSS:
-```javascript
-elemento.classList.add('activo');
-elemento.classList.remove('activo');
-```
-
-### `new Audio()`
-Crea un objeto de audio:
-```javascript
-const audio = new Audio('./ruta/audio.mp3');
-audio.play();  // Reproduce
-audio.pause(); // Pausa
-audio.currentTime = 0; // Reinicia al inicio
-```
-
----
-
-## 🚀 Cómo Usar
-
-1. **Agregar imágenes** en `assets/img/`:
-   - `perfil.jpg`
-   - `personaje-1.jpg`, `personaje-2.jpg`, `personaje-3.jpg`
-   - `manga-1.jpg`, `manga-2.jpg`
-   - `ilustracion-1.jpg`, `ilustracion-2.jpg`
-   - `sketch-1.jpg`, `sketch-2.jpg`
-
-2. **Agregar audios** en `assets/audio/`:
-   - `tema-kaito.mp3`
-   - `tema-sakura.mp3`
-   - `tema-ryuu.mp3`
-
-3. **Abrir** `index.html` en el navegador
-
----
-
-## 🎯 Características Clave
-
-- ✅ **Export/Import** - Clases exportadas e importadas en main.js
-- ✅ **CSS externo** - Cada componente con su CSS separado
-- ✅ **Shadow DOM** - Encapsulamiento total
-- ✅ **Audio interactivo** - Música al pasar el mouse en personajes
-- ✅ **Layout Collage** - Galería tipo Pinterest/Masonry
-- ✅ **Atributos dinámicos** - Personajes definidos con atributos en HTML
-- ✅ **Componentes anidados** - `<galeria-obras>` genera `<tarjeta-obra>`
-- ✅ **Custom Events** - Comunicación entre componentes
-- ✅ **Código comentado** - Funciones JS explicadas
-
----
-
-## 🎨 Estilo
-
-- **Tema oscuro** - Tonos azul oscuro (#0a0e27, #161b22, #4a6fa5)
-- **Minimalista** - Diseño limpio y enfocado
-- **Responsive** - Adaptable a móvil, tablet y escritorio
-
----
-
-Hecho con ❤️ usando Web Components puros
+Hecho con Claude y unas dos tazas de café, gracias.
+- Estiven Oña
