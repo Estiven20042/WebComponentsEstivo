@@ -2,7 +2,7 @@
 
 Este es un sitio web donde muestro lo que he hecho como artista:, personajes y proyectos artísticos (valga la redundancia)
 
-## ✨ ¿Qué hace este proyecto?
+## ¿Qué hace este proyecto?
 
 Este sitio web es como un portafolio virtual, dónde:
 - Un componente de perfil muestra mi foto, nombre, alias, edad y una bio, además de cualidades que siento son clave.
@@ -14,7 +14,7 @@ Este sitio web es como un portafolio virtual, dónde:
 
 Todo está construido con **Web Components**, para modularidad y mantenimiento ágil en caso de,
 
-## 🚀 ¿Cómo ejecutar el proyecto?
+## ¿Cómo ejecutar el proyecto?
 
 ### Opción 1: Live Server (Recomendado)
 1. Abre el proyecto en Visual Studio Code
@@ -31,16 +31,16 @@ Todo está construido con **Web Components**, para modularidad y mantenimiento �
 
 **Nota:** Algunos navegadores pueden tener problemas con módulos de JavaScript al abrir directamente. Si hay errores, es mejor instalar y usar Live Server
 
-## 🧩 Componentes del Proyecto
+## Componentes del Proyecto
 
 Cada módulo tiene su chamba, en este caso, los describo brevemente a continuación:
 
-### 📦 Componentes Principales
+### Componentes Principales
 
 #### `perfil-artista`
 Muestra mi información personal: nombre, foto, edad, biografía y mis habilidades como artista. Es como mi tarjeta de presentación.
 
-#### `etiqueta-elemento` ⭐
+#### `etiqueta-elemento` 
 **¡El componente más reutilizable!** Es como una chapa o etiqueta bonita con colores y iconos. Se usa dentro de otros componentes:
 - En `perfil-artista`: muestra habilidades (Ilustración, Manga, etc.)
 - En `tarjeta-obra`: muestra las categorías de cada obra
@@ -74,7 +74,7 @@ Lista de proyectos futuros en los que estoy trabajando.
 #### `redes-sociales`
 Enlaces a todas mis redes sociales con iconos de Bootstrap
 
-### 🔧 Módulos de Soporte
+### Módulos de Soporte
 
 #### `data-loader.js`
 Es el localstorage, tiene la función de una base de datos CS (Client Side) para persistencia de datos, se puede escalar obviamente usando una DB como POSTGRES, MYSQL, etc... para poder trabajar con JSONs.
@@ -85,7 +85,7 @@ Aquí solo se mandan a llamar los componentes, sigue este proceso:
 2. Registrar todos los Web Components (ES Modules)
 3. Hacer que todo funcione junto (Define los componentes y funcionan al importarse como módulo en el index.)
 
-### 🎨 Archivos de Estilo
+### Archivos de Estilo
 
 Cada componente tiene su propio archivo CSS:
 - `perfil-artista.css` - Estilos del perfil
@@ -94,7 +94,7 @@ Cada componente tiene su propio archivo CSS:
 - `tarjeta-obra.css` - Estilos de las tarjetas individuales
 - Y más...
 
-## 📂 Estructura de Carpetas
+## Estructura de Carpetas
 
 ```
 public/
@@ -115,7 +115,7 @@ public/
     └── bootstrap/         (Framework de estilos e iconos)
 ```
 
-## 🎯 Características Requeridas
+## Características Requeridas
 
 ### Componentes Anidados
 El proyecto demuestra cómo un componente puede usar otros componentes dentro de él:
@@ -129,7 +129,7 @@ Cada personaje tiene su propio tema musical. Con un hover se pueden escuchar los
 ### Diseño Responsive
 El sitio se adapta a diferentes tamaños de pantalla (celular, tablet, computadora) gracias a Bootstrap.
 
-## 🛠️ Tecnologías Usadas
+## Tecnologías Usadas
 
 - **HTML5** - Estructura
 - **CSS3** - Estilos y animaciones
@@ -139,7 +139,7 @@ El sitio se adapta a diferentes tamaños de pantalla (celular, tablet, computado
 - **Bootstrap Icons** - Iconos bonitos
 - **LocalStorage** - Almacenamiento en el navegador
 
-## 📝 Notas para Developers
+## Notas para Developers
 
 En caso de querer hacer modificaciones:
 
