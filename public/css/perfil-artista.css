@@ -1,0 +1,54 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Agdasima:wght@400;700&family=Amarante&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rouge+Script&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* CSS personalizado para perfil-artista (Bootstrap ya maneja el layout) */
+
+.perfil-contenedor {
+  background: linear-gradient(135deg, #1a2332 0%, #0d1117 100%);
+  border: 1px solid #2d4a7c;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border: 4px solid #4a6fa5;
+  box-shadow: 0 4px 20px rgba(74, 111, 165, 0.5);
+}
+
+.nombre {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e8eaf6;
+  font-family: 'Aclonica', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.alias {
+  color: #8f0e05;
+  font-family: 'Indie Flower', cursive;
+}
+
+.bio {
+  color: #9fa8da;
+  line-height: 1.6;
+  font-family: 'Agdasima', sans-serif;
+  font-size: 1.3rem;
+}
+
+.stat-item strong {
+  color: #4a6fa5;
+  font-size: 1.3rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+}
+
+.stat-item small {
+  color: #e8eaf6;
+  font-family: 'Agdasima', sans-serif;
+  text-transform: uppercase;
+}

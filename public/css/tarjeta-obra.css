@@ -1,0 +1,41 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Agdasima:wght@400;700&family=Amarante&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rouge+Script&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* CSS personalizado para tarjeta-obra (Bootstrap card ya tiene estilos base) */
+
+.tarjeta {
+  background: #161b22;
+  border: 1px solid #2d4a7c;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(74, 111, 165, 0.3);
+  border-color: #4a6fa5;
+}
+
+.imagen {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  /* Reducir el tamaño visual de la imagen al 65% */
+  width: 65%;
+  height: auto;
+  /* Centrar la imagen */
+  display: block;
+  margin: 1rem auto;
+}
+
+.titulo {
+  color: #e8eaf6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Rock Salt', cursive;
+}
+
+.card-body {
+  background: #161b22;
+  border-top: 1px solid #2d4a7c;
+}

@@ -1,0 +1,65 @@
+.etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-family: 'Amarante';
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.etiqueta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.etiqueta.morado {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: rgb(0, 0, 0);
+}
+
+.etiqueta.rosa {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: rgb(0, 0, 0);
+}
+
+.etiqueta.azul {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: rgb(0, 0, 0);
+}
+
+.etiqueta.verde {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: rgb(0, 0, 0);
+}
+
+.etiqueta.amarillo {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: rgb(0, 0, 0);
+}
+
+.etiqueta.oscuro {
+    background: linear-gradient(135deg, #434343 0%, #000000 100%);
+    color: rgb(255, 255, 255);
+}
+
+.etiqueta.claro {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+}
+
+.etiqueta.pequeno {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+}
+
+.etiqueta.grande {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.etiqueta i {
+    font-size: 0.9em;
+}

@@ -1,0 +1,93 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Agdasima:wght@400;700&family=Amarante&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rouge+Script&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Keyframes para animación de aura pulsante */
+@keyframes aura-pulse {
+  0% {
+    filter: drop-shadow(0 0 15px rgba(180, 50, 60, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgb(136, 20, 28));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(65, 10, 15, 0.6));
+  }
+}
+
+.cinta-contenedor {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #2d4a7c;
+}
+
+.titulo-cinta {
+  color: #e8eaf6;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 4px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+/* Contenedor del grid - centrado y responsive */
+.row {
+  justify-content: center;
+  max-width: 100%;
+}
+
+.personaje-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  position: relative;
+  width: 250px; /* Ancho fijo para consistencia */
+  max-width: 100%;
+}
+
+.personaje-card:hover {
+  transform: translateY(-5px);
+}
+
+.personaje-imagen {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(45, 74, 124, 0.5));
+}
+
+.personaje-card:hover .personaje-imagen {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(180, 50, 60, 0.9));
+}
+
+.personaje-card.activo .personaje-imagen {
+  animation: aura-pulse 1.5s ease-in-out infinite;
+  transform: scale(1.1);
+}
+
+.card-body {
+  background: transparent;
+  padding: 0.5rem 0.25rem;
+}
+
+.personaje-nombre {
+  color: #e8eaf6;
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  font-family: 'Pacifico', cursive;
+}
+
+.personaje-card:hover .personaje-nombre {
+  opacity: 1;
+  transform: translateY(0);
+}
+

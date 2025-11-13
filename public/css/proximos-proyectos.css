@@ -1,0 +1,56 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Agdasima:wght@400;700&family=Amarante&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rouge+Script&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.proyectos-contenedor {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #2d4a7c;
+}
+
+.titulo-seccion {
+  color: #e8eaf6;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 3px;
+}
+
+.proyecto-card {
+  background: #0a0e27;
+  border: 2px solid #2d4a7c;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(74, 111, 165, 0.3);
+  border-color: #4a6fa5;
+}
+
+.proyecto-nombre {
+  color: #e8eaf6;
+  font-size: 1.3rem;
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+}
+
+.proyecto-descripcion {
+  color: #9fa8da;
+  font-size: 0.95rem;
+  font-family: 'Agdasima', sans-serif;
+  margin: 0;
+}
+
+.progress {
+  background-color: #1a2332;
+  border: 1px solid #2d4a7c;
+}
+
+.progress-bar {
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
