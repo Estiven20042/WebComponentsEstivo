@@ -1,4 +1,3 @@
-// MÓDULO CENTRAL DE DATOS - Pobla localStorage automáticamente
 export class DataLoader {
 
     static getDatosIniciales() {
@@ -9,7 +8,7 @@ export class DataLoader {
             edad: '21',
             bio: 'Nose, dibujo desde los 6, dibujaba muchos Gokus, así que decidí crear el mío, así nació Funky. Por algun mótivo, mi vida es dibujar, me encanta dibujar, pero estudio ingeniería.',
             avatar: './assets/img/yo.jpg',
-            habilidades: ['Ilustración Digital', 'Diseño de Personajes', 'Animación', 'Manga', 'Concept Art']
+            habilidades: ['Ilustración Digital', 'Animación', 'Manga', 'Clip Studio Paint', 'Photoshop']
             },
 
             personajes: [
@@ -96,6 +95,13 @@ export class DataLoader {
                 imagen: './assets/img/NaggyxFunky.jpeg',
                 tag1: 'OC x Canon',
                 tag2: 'Relationship'
+            },
+            {
+                id: 'crossover',
+                titulo: 'Together again.',
+                imagen: './assets/img/maxresdefault.jpg',
+                tag1: 'Multiverso',
+                tag2: 'Original Characters'
             }
             ],
 
@@ -106,7 +112,7 @@ export class DataLoader {
             imagen: './assets/img/MangaCapitulo1.png',
             tag1: 'Acción',
             tag2: 'Aventura',
-            tag3: 'Manga'
+            tag3: 'Shonen'
             },
 
             redes: [
@@ -139,12 +145,12 @@ export class DataLoader {
             proyectos: [
             {
                 nombre: 'Capítulo 2 del Manga',
-                descripcion: 'Finalmente, algo de acción, Funky encuentra pistas después de buscar en varios lugares, también conoce a alguien más que será un aliado increíble.',
+                descripcion: 'Nuevos aliados, y al fin: acción.',
                 progreso: 65
             },
             {
                 nombre: 'Manager de Manga en Web App',
-                descripcion: 'Un manager para gestionar el proyecto: personajes, sitios, concept arts y un dashboard para mi mismo.',
+                descripcion: 'Un manager para gestionar el proyecto con PHP y APIs REST.',
                 progreso: 30
             },
             {
@@ -155,7 +161,7 @@ export class DataLoader {
             {
                 nombre: 'Animatic Corto de Bikury y Funky',
                 descripcion: 'Son chibis, pero es animar wacho, que calvario ☠',
-                progreso: 15
+                progreso: 5
             }
             ],
 

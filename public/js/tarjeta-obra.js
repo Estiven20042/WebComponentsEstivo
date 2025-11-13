@@ -14,7 +14,7 @@ export class TarjetaObra extends HTMLElement {
             </div>
             <div class="card-body text-center">
                 <h5 class="card-title titulo mb-2" id="titulo"></h5>
-                <div class="d-flex justify-content-center gap-2 flex-wrap" id="tags-container">
+                <div class="d-flex justify-content-center gap-2 flex-wrap mt-3" id="tags-container">
                 </div>
             </div>
         </div>

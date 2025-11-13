@@ -24,7 +24,7 @@ export class PerfilArtista extends HTMLElement {
                     <div class="bg-dark bg-opacity-50 p-4 rounded-3 border border-2 border-primary border-opacity-50 shadow">
                         <h1 class="nombre mb-2 text-white fw-bold" id="nombre"></h1>
                         <p class="alias mb-3 text-primary fs-4" id="alias"></p>
-                        <p class="edad mb-0 text-light lh-lg fs-4" id="edad"></p>
+                        <p class="edad mb-0 text-success lh-lg fs-4" id="edad"></p>
                         <p class="bio mb-3 text-light lh-lg fs-3" id="bio"></p>
                         <div class="d-flex gap-2 flex-wrap" id="habilidades-container">
                         </div>

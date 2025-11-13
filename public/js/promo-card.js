@@ -19,9 +19,9 @@ export class PromoCard extends HTMLElement {
                     </div>
                 </div>
                 <div class="col-md-7 text-center">
-                    <span class="badge bg-warning text-dark mb-3 fs-6">CAPÍTULO 1 DISPONIBLE</span>
-                    <h2 class="promo-titulo mb-3" id="titulo"></h2>
-                    <p class="promo-descripcion mb-4" id="descripcion"></p>
+                    <span class="badge bg-warning text-dark mb-3 fs-2">POR TIEMPO LIMITADO</span>
+                    <h2 class="promo-titulo mb-3 fs-1" id="titulo"></h2>
+                    <p class="promo-descripcion mb-4 fs-3" id="descripcion"></p>
                     <a class="btn-promo btn btn-lg shadow" id="enlace" href="#" target="_blank">
                         ¡LEER AHORA! 🚀
                     </a>
@@ -59,7 +59,7 @@ export class PromoCard extends HTMLElement {
             etiqueta.setAttribute('texto', tag);
             etiqueta.setAttribute('color', colores[index % colores.length]);
             etiqueta.setAttribute('tamano', 'grande');
-            etiqueta.setAttribute('icono', 'star-fill');
+            etiqueta.setAttribute('icono', 'star');
             tagsContainer.appendChild(etiqueta);
         });
     }

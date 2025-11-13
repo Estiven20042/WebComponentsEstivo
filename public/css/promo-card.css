@@ -1,7 +1,5 @@
-/* Importar Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Agdasima:wght@400;700&family=Amarante&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Rouge+Script&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* CSS personalizado para promo-card */
 
 .promo-contenedor {
   background: linear-gradient(135deg, #1a2332 0%, #161b22 100%);
@@ -80,7 +78,6 @@
   border-color: #4a6fa5;
 }
 
-/* Animación de pulso para badge */
 @keyframes pulse {
 
   0%,
