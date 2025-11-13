@@ -14,7 +14,7 @@ export class PerfilArtista extends HTMLElement {
             <div class="row align-items-center g-4">
                 <div class="col-md-4 text-center">
                     <div class="avatar-wrapper position-relative d-inline-block">
-                        <img class="avatar rounded-circle shadow-lg border border-3 border-primary" id="avatar" src="" alt="Avatar" style="width: 200px; height: 200px; object-fit: cover;">
+                        <img class="avatar rounded-circle shadow-lg border border-3 border-primary" id="avatar" src="" alt="Avatar" style="width: 280px; height: 280px; object-fit: cover;">
                         <div class="position-absolute bottom-0 end-0 bg-success rounded-circle p-2 border border-2 border-dark" style="width: 40px; height: 40px;">
                             <span class="text-white fw-bold">✓</span>
                         </div>
@@ -23,8 +23,8 @@ export class PerfilArtista extends HTMLElement {
                 <div class="col-md-8">
                     <div class="bg-dark bg-opacity-50 p-4 rounded-3 border border-2 border-primary border-opacity-50 shadow">
                         <h1 class="nombre mb-2 text-white fw-bold" id="nombre"></h1>
-                        <p class="alias mb-3 text-primary fs-4" id="alias"></p>
-                        <p class="edad mb-0 text-success lh-lg fs-4" id="edad"></p>
+                        <p class="alias mt-4 fs-3" id="alias"></p>
+                        <p class="edad mb-0 text-success lh-lg fs-3" id="edad"></p>
                         <p class="bio mb-3 text-light lh-lg fs-3" id="bio"></p>
                         <div class="d-flex gap-2 flex-wrap" id="habilidades-container">
                         </div>

@@ -6,7 +6,7 @@ export class DataLoader {
             nombre: 'Estiven Oña',
             alias: '@Estivo',
             edad: '21',
-            bio: 'Nose, dibujo desde los 6, dibujaba muchos Gokus, así que decidí crear el mío, así nació Funky. Por algun mótivo, mi vida es dibujar, me encanta dibujar, pero estudio ingeniería.',
+            bio: 'Nose, dibujo desde los 6, dibujaba muchos Gokus, así que decidí crear el mío, así nació Funky. Mi vida es dibujar, me encanta dibujar, pero estudio ingeniería, por alguna razón.',
             avatar: './assets/img/yo.jpg',
             habilidades: ['Ilustración Digital', 'Animación', 'Manga', 'Clip Studio Paint', 'Photoshop']
             },
@@ -107,7 +107,7 @@ export class DataLoader {
 
             promo: {
             titulo: 'LEE EL MANGA AQUÍ',
-            descripcionCorta: '¡FUNKY ABYSS RIFT MANGA YA ESTÁ AQUÍ!',
+            descripcionCorta: '¡FUNKY ABYSS RIFT MANGA ESTÁ ON FIRE!',
             enlace: 'https://drive.google.com/file/d/1bamyP9OZg19NZKQOrRz0M0XrXx7EvZKz/view?usp=sharing',
             imagen: './assets/img/MangaCapitulo1.png',
             tag1: 'Acción',

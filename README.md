@@ -4,7 +4,7 @@ Este es un sitio web donde muestro lo que he hecho como artista:, personajes y p
 
 ## ✨ ¿Qué hace este proyecto?
 
-Este sitio web es como una portafolio virtual, dónde:
+Este sitio web es como un portafolio virtual, dónde:
 - Un componente de perfil muestra mi foto, nombre, alias, edad y una bio, además de cualidades que siento son clave.
 - Se dan a conocer a los personajes principales de mi manga.
 - Se Explora mi galería de ilustraciones terminadas.
